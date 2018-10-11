@@ -1,6 +1,7 @@
 package com.slandshow.JSF;
 
 
+import com.slandshow.models.Station;
 import com.slandshow.models.TimeSchedule;
 import com.slandshow.service.TimeScheduleBean;
 import javax.ejb.EJB;
@@ -8,10 +9,10 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import java.util.List;
 
-//@ViewScoped
-//@ManagedBean
+@ViewScoped
+@ManagedBean
 public class ScheduleBean {
-/*
+
     @EJB
     private TimeScheduleBean timeScheduleBean;
 
@@ -41,5 +42,5 @@ public class ScheduleBean {
 
     public void setSelectedItem(String selectedItem) {
         timeScheduleBean.setSelectedItem(selectedItem);
-    }*/
+    }
 }

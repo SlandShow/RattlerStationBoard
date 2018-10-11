@@ -10,11 +10,11 @@ public class Schedule implements Serializable {
 
     private String dateArrival;
 
-    private String train;
+    private String trainName;
 
-    private String stationDeparture;
+    private String stationDepartureName;
 
-    private String stationArrival;
+    private String stationArrivalName;
 
     private Integer price;
 
@@ -28,14 +28,14 @@ public class Schedule implements Serializable {
     public String getDateArrival() { return dateArrival; }
     public void setDateArrival(String dateArrival) { this.dateArrival = dateArrival; }
 
-    public String getTrain() { return train; }
-    public void setTrain(String train) { this.train = train; }
+    public String getTrainName() { return trainName; }
+    public void setTrainName(String train) { this.trainName = trainName; }
 
-    public String getStationDeparture() { return stationDeparture; }
-    public void setStationDeparture(String stationDeparture) { this.stationDeparture = stationDeparture; }
+    public String getStationDepartureName() { return stationDepartureName; }
+    public void setStationDepartureName(String stationDeparture) { this.stationDepartureName = stationDeparture; }
 
-    public String getStationArrival() { return stationArrival; }
-    public void setStationArrival(String stationArrival) { this.stationArrival = stationArrival; }
+    public String getStationArrivalName() { return stationArrivalName; }
+    public void setStationArrival(String stationArrival) { this.stationArrivalName = stationArrival; }
 
     public Integer getPrice() {
         return price;

@@ -3,6 +3,7 @@ package com.slandshow.helpers;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.slandshow.models.Schedule;
+import com.slandshow.models.Station;
 import com.slandshow.utils.Utils;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -37,6 +38,7 @@ public class Loader {
         return schedules;
     }
 
+
     public Schedule getById(Long id) {
         String response = getResultResponse(Utils.URL_SCHEDULE_BY_ID + id);
         Schedule schedule = null;
@@ -50,11 +52,11 @@ public class Loader {
         return schedule;
     }
 
-    public List<String> getStations() {
+    public List<Station> getStations() {
         String response = getResultResponse(Utils.URL_STATIONS);
-        List<String> stations = null;
+        List<Station> stations = null;
         try {
-            stations = objectMapper.readValue(response, new TypeReference<List<String>>() {
+            stations = objectMapper.readValue(response, new TypeReference<List<Station>>() {
             });
         } catch (IOException e) {
             log.error("ERROR, CAN'T LOAD STATIONS " + e.getMessage());

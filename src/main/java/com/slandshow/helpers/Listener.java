@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 public class Listener {
-/*
+
     private static final String EXCHANGE_NAME = "messages";
     private static final Logger log = Logger.getLogger(Listener.class);
     private Channel channel;
@@ -40,6 +40,6 @@ public class Listener {
         channel.close();
         connection.close();
     }
-*/
+
 }
 

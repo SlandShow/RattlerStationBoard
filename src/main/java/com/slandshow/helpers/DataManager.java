@@ -32,7 +32,7 @@ public class DataManager {
         Schedule schedule = loader.getById(id);
         if (schedule != null) {
             schedules.add(schedule);
-            LAST_CHANGE_MESSAGE = "Create new schedule between " + schedule.getStationDeparture() + " - " + schedule.getStationArrival();
+            LAST_CHANGE_MESSAGE = "Create new schedule between " + schedule.getStationDepartureName() + " - " + schedule.getStationArrivalName();
         }
         log.info(LAST_CHANGE_MESSAGE);
     }
@@ -43,7 +43,7 @@ public class DataManager {
         if (newSchedule != null) {
             schedules.remove(oldSchedule);
             schedules.add(newSchedule);
-            LAST_CHANGE_MESSAGE = "Schedule between " + newSchedule.getStationDeparture() + " - " + newSchedule.getStationArrival() + " was updated";
+            LAST_CHANGE_MESSAGE = "Schedule between " + newSchedule.getStationDepartureName() + " - " + newSchedule.getStationArrivalName() + " was updated";
         }
         log.info(LAST_CHANGE_MESSAGE);
     }
@@ -52,7 +52,7 @@ public class DataManager {
         Schedule schedule = schedules.stream().filter(x -> x.getId().equals(id)).findAny().get();
         if (schedule != null) {
             schedules.remove(schedule);
-            LAST_CHANGE_MESSAGE = "Schedule between " + schedule.getStationDeparture() + " - " + schedule.getStationArrival() + " was deleted";
+            LAST_CHANGE_MESSAGE = "Schedule between " + schedule.getStationDepartureName() + " - " + schedule.getStationArrivalName() + " was deleted";
         }
         log.info(LAST_CHANGE_MESSAGE);
     }

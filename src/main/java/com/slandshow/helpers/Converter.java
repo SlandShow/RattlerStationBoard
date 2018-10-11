@@ -15,12 +15,18 @@ public class Converter {
      * @return
      */
     public static List<TimeSchedule> conventDeparture(String stationMain, List<Schedule> schedules) {
+        System.out.println("HERE --> ");
+
+        for (int i = 0; i < schedules.size(); i++) {
+            System.out.println(schedules.get(i).getTrainName());
+        }
+
         return schedules.stream()
-                .filter(schedule -> schedule.getStationArrival().equals(stationMain) && Utils.checkScheduleForToday(schedule))
+                .filter(schedule -> schedule.getStationArrivalName().equals(stationMain) && Utils.checkScheduleForToday(schedule))
                 .map(x -> {
                     TimeSchedule timeSchedule = new TimeSchedule();
-                    timeSchedule.setStation(x.getStationDeparture());
-                    timeSchedule.setTrain(x.getTrain());
+                    timeSchedule.setStation(x.getStationDepartureName());
+                    timeSchedule.setTrainName(x.getTrainName());
                     timeSchedule.setTime(Utils.parseToTime(x.getDateDeparture()));
                     return timeSchedule;
                 }).collect(Collectors.toList());
@@ -31,13 +37,18 @@ public class Converter {
      * @param schedules
      * @return
      */
-    public static List<TimeSchedule> convertArrival(String stationMain, List<Schedule> schedules) {
+    public static List<TimeSchedule> convertArrival(String stationMain, List<Schedule> schedules) { System.out.println("HERE --> ");
+
+        for (int i = 0; i < schedules.size(); i++) {
+            System.out.println(schedules.get(i).getTrainName());
+        }
+
         return schedules.stream()
-                .filter(schedule -> schedule.getStationDeparture().equals(stationMain))
+                .filter(schedule -> schedule.getStationDepartureName().equals(stationMain))
                 .map(x -> {
                     TimeSchedule timeSchedule = new TimeSchedule();
-                    timeSchedule.setStation(x.getStationArrival());
-                    timeSchedule.setTrain(x.getTrain());
+                    timeSchedule.setStation(x.getStationArrivalName());
+                    timeSchedule.setTrainName(x.getTrainName());
                     timeSchedule.setTime(Utils.parseToTime(x.getDateArrival()));
                     return timeSchedule;
                 }).collect(Collectors.toList());

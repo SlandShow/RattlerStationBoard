@@ -3,6 +3,7 @@ package com.slandshow.service;
 import com.slandshow.helpers.DataManager;
 import com.slandshow.helpers.Listener;
 import com.slandshow.helpers.Loader;
+import com.slandshow.models.Station;
 import com.slandshow.models.TimeSchedule;
 import org.apache.log4j.Logger;
 
@@ -10,12 +11,13 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.ejb.Singleton;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
 
 @Singleton
 public class TimeScheduleBean {
-/*
+
     private static final Logger log = Logger.getLogger(TimeScheduleBean.class);
 
     private DataManager dataManager = DataManager.getInstance();
@@ -26,9 +28,9 @@ public class TimeScheduleBean {
 
     private List<TimeSchedule> schedulesArrival;
 
-    private List<String> stations = loader.getStations();
+    private List<Station> stations = loader.getStations();
 
-    private String selectedItem = "Saint Petersburg";
+    private String selectedItem = "Oselki";
 
     private String lastChangesInfo = "No changes ... ";
 
@@ -41,12 +43,12 @@ public class TimeScheduleBean {
             /*
             Update schedules for current station if it was updated in real time
              */
-/*
+
             if (dataManager.checkSelectedItem(selectedItem))
                 updateSchedules(selectedItem);
         }
     }
-/*
+
     @PostConstruct
     private void init() throws IOException, TimeoutException {
         listener.start();
@@ -64,9 +66,13 @@ public class TimeScheduleBean {
     }
 
     // Getters & setters
-/*
+
     public List<String> getStations() {
-        return stations;
+        List<String> tokens = new ArrayList<>();
+        for (int i = 0; i < stations.size(); i++) {
+            tokens.add(stations.get(i).getName());
+        }
+        return tokens;
     }
 
     public String getSelectedItem() {
@@ -97,7 +103,7 @@ public class TimeScheduleBean {
         this.selectedItem = selectedItem;
 
         updateSchedules(selectedItem);
-    }/*
+    }
 
-*/
+
 }

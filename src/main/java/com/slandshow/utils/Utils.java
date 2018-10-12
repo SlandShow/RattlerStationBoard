@@ -13,7 +13,7 @@ public class Utils {
 
     public static final String URL_SCHEDULES = "http://localhost:8080/api/board/schedule/today";
     public static final String URL_STATIONS = "http://localhost:8080/api/board/stations";
-    public static final String URL_SCHEDULE_BY_ID = "http://localhost:8000/schedule/get/";
+    public static final String URL_SCHEDULE_BY_ID = "http://localhost:8080/board/schedule/";
 
     private static final Logger log = Logger.getLogger(Utils.class);
 

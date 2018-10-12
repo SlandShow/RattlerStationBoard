@@ -8,23 +8,6 @@
    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
 
-    <display-name>EmployeeApp</display-name>
-    <welcome-file-list>
-        <welcome-file>hello.xhtml</welcome-file>
-    </welcome-file-list>
-
-    <servlet>
-        <servlet-name>facesServlet</servlet-name>
-        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>facesServlet</servlet-name>
-        <url-pattern>*.xhtml</url-pattern>
-    </servlet-mapping>
-
-    <!--
     <display-name>Archetype Created Web Application</display-name>
     <welcome-file-list>
         <welcome-file>faces/home.xhtml</welcome-file>
@@ -59,5 +42,5 @@
     <context-param>
         <param-name>com.sun.faces.enableRestoreView11Compatibility</param-name>
         <param-value>true</param-value>
-    </context-param> -->
+    </context-param>
 </web-app>

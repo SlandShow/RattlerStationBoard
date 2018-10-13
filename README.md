@@ -25,3 +25,7 @@
 4. Config `RabitMQ server`.
 5. Add admin user.
 6. Open in browser `http://localhost:15672`.
+
+### TODO-List:
+1. Add new design [`x`].
+2. Add new images [`x`].

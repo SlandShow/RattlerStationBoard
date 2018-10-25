@@ -1,5 +1,6 @@
+
 body {
-    background: url(bg.png);
+    background: linear-gradient(to right, #9796f0, #fbc7d4);
 }
 
 .main {
@@ -8,8 +9,8 @@ body {
 }
 
 .info {
-    border: 2px orange;
-    background: #1b1e21;
+    border: 2px solid;
+    background: #fffaf9;
     font-size: x-large;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-weight: bold;

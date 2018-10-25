@@ -6,8 +6,6 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://java.sun.com/jsf/core">
 
-<!--  -->
-
 <h:head>
     <title>RattlerStation Board</title>
     <h:outputStylesheet name="css/bootstrap.min.css"/>
@@ -15,7 +13,7 @@
 </h:head>
 <h:body>
     <h:form styleClass="text-warning info">
-        <!-- <h:graphicImage library="images" name="warning.png"/> -->
+
         <h:outputText id="last" value="#{scheduleBean.lastChangedInfo}" style="margin-left: 30px"/>
         <p:poll interval="3" listener="#{scheduleBean.update}" update="last"/>
         <p:poll interval="2" listener="#{scheduleBean.update}" update="resultDeparture"/>

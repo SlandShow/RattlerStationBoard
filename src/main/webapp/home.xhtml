@@ -24,7 +24,7 @@
     <h:form>
         <div class="row main">
             <div class="col-1">
-                <h:outputLabel styleClass="text-warning font-weight-bold text-xl-left">MAIN STATION: </h:outputLabel>
+                <h:outputLabel styleClass="text-warning font-weight-bold text-xl-left" style="color: #ffffff">MAIN STATION: </h:outputLabel>
             </div>
             <div class="col">
                 <p:selectOneMenu id="menu" value="#{scheduleBean.selectedItem}" style="width: 300px">
@@ -38,29 +38,29 @@
     <br/>
     <div class="row main">
         <div class="col">
-            <h4 class="text-warning text-center">DEPARTURE</h4>
+            <h4 class="text-warning text-center" style="color: #ffffff">DEPARTURE</h4>
             <h:dataTable id="resultDeparture" value="#{scheduleBean.scheduleDeparture}" var="schedule"
                          styleClass="table table-dark text-warning"
                          style="margin-left: 2%">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Train"/>
+                        <h:outputText style="color: #ffffff" value="Train"/>
                     </f:facet>
-                    <h:outputText value="#{schedule.trainName}"/>
+                    <h:outputText style="color: #ffffff" value="#{schedule.trainName}"/>
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Time"/>
+                        <h:outputText style="color: #ffffff" value="Time"/>
                     </f:facet>
-                    <h:outputText value="#{schedule.time}"/>
+                    <h:outputText style="color: #ffffff" value="#{schedule.time}"/>
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Station"/>
+                        <h:outputText style="color: #ffffff" value="Station"/>
                     </f:facet>
-                    <h:outputText value="#{schedule.station}"/>
+                    <h:outputText style="color: #ffffff" value="#{schedule.station}"/>
                 </h:column>
 
             </h:dataTable>
@@ -68,29 +68,29 @@
 
         <div class="col-1"></div>
         <div class="col">
-            <h4 class="text-warning text-center">ARRIVAL</h4>
+            <h4 class="text-warning text-center" style="color: #ffffff">ARRIVAL</h4>
             <h:dataTable id="resultArrival" value="#{scheduleBean.scheduleArrival}" var="schedule"
                          styleClass="table table-dark text-warning"
                          style="margin-right: 2%">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Train"/>
+                        <h:outputText style="color: #ffffff" value="Train"/>
                     </f:facet>
-                    <h:outputText value="#{schedule.trainName}"/>
+                    <h:outputText style="color: #ffffff" value="#{schedule.trainName}"/>
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Time"/>
+                        <h:outputText style="color: #ffffff" value="Time"/>
                     </f:facet>
-                    <h:outputText value="#{schedule.time}"/>
+                    <h:outputText style="color: #ffffff" value="#{schedule.time}"/>
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Station"/>
+                        <h:outputText style="color: #ffffff" value="Station"/>
                     </f:facet>
-                    <h:outputText value="#{schedule.station}"/>
+                    <h:outputText style="color: #ffffff" value="#{schedule.station}"/>
                 </h:column>
             </h:dataTable>
         </div>

@@ -38,14 +38,17 @@ public class TimeScheduleBean {
         if (dataManager.getStatusChanges()) {
             lastChangesInfo = dataManager.getLastInfoChanges();
             log.info("update @schedule ... ");
-            dataManager.resetStatusChanges();
+
 
             /*
             Update schedules for current station if it was updated in real time
              */
 
-            if (dataManager.checkSelectedItem(selectedItem))
+            if (dataManager.checkSelectedItem(selectedItem)) {
                 updateSchedules(selectedItem);
+            }
+
+            dataManager.resetStatusChanges();
         }
     }
 

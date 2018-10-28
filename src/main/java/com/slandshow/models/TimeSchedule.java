@@ -6,7 +6,7 @@ public class TimeSchedule {
 
     private String station;
 
-    private String trainName;
+    private String train;
 
     /* Getters & setters */
     public String getTime() { return time; }
@@ -15,6 +15,6 @@ public class TimeSchedule {
     public String getStation() { return station; }
     public void setStation(String station) { this.station = station; }
 
-    public String getTrainName() { return trainName; }
-    public void setTrainName(String train) { this.trainName = train; }
+    public String getTrain() { return train; }
+    public void setTrain(String train) { this.train = train; }
 }

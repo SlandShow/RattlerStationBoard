@@ -27,6 +27,7 @@ public class Loader {
     }
 
     public List<Schedule> getSchedules() {
+
         String response = getResultResponse(Utils.URL_SCHEDULES);
         List<Schedule> schedules = null;
         try {
@@ -44,8 +45,7 @@ public class Loader {
         Schedule schedule = null;
         try {
             log.info(response);
-            schedule = objectMapper.readValue(response, new TypeReference<Schedule>() {
-            });
+            schedule = objectMapper.readValue(response, Schedule.class);
         } catch (IOException e) {
             log.error("ERROR, CAN'T LOAD SCHEDULE BY ID " + e.getMessage());
         }

@@ -29,7 +29,7 @@ public class Schedule implements Serializable {
     public void setDateArrival(String dateArrival) { this.dateArrival = dateArrival; }
 
     public String getTrainName() { return trainName; }
-    public void setTrainName(String train) { this.trainName = trainName; }
+    public void setTrainName(String train) { this.trainName = train; }
 
     public String getStationDepartureName() { return stationDepartureName; }
     public void setStationDepartureName(String stationDeparture) { this.stationDepartureName = stationDeparture; }
